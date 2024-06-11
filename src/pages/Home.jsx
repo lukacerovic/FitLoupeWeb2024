@@ -81,7 +81,7 @@ export default function Home() {
                     The main focus of the app is to provide a simple and quick solution for creating workouts and tracking the progress of each client, whether trainers are working remotely or in-person at the gym.
                     <br/><br/>
                 </p>
-                <div className='flex flex-row justify-between text-white pt-[5vw] w-[40%] self-center'>
+                <div className='flex flex-row justify-between text-white pt-[5vw] w-[100%] lg:w-[40%] self-center'>
                     <div className='flex gap-5 items-center'>
                         <img src='images/appStore.png' className='w-[50%]'/>
                         <p className='md:text-2xl xl:text-3xl'>iOS</p>
@@ -101,13 +101,13 @@ export default function Home() {
             </video> 
         </div>*/}
         <div className='flex flex-col text-white pt-[15vh] gap-[10vh]'>
-            <h1 className='text-6xl lg:text-8xl text-center'>Monetize Your Helth</h1>
+            <h1 className='text-4xl sm:text-6xl lg:text-8xl text-center'>Monetize Your Helth</h1>
             <p className='w-[80%] lg:w-[70%] text-center self-center text-2xl lg:text-4xl' style={{ lineHeight: '2em' }}>
             FitLoupe serves as a modern alternative to traditional tools, providing trainers with a user-friendly platform to create personalized workout plans, track client progress, manage schedules, and facilitate seamless communication.
             </p>
             <div className='progress-container'>
                 <div className={`progress-item ${activeIndex === 0 ? 'active' : ''}`} style={{ order: 2, transform: `translateX(${activeIndex === 0 ? '110%' : activeIndex === 1 ? '0%' : '-110%'}) scale(${activeIndex === 1 ? 1 : 0.7})`, opacity: `${activeIndex === 1 ? 1 : 0.4}` }}>
-                    <img src="../public/images/infoNovi.png" alt="Client Info" style={{height:'30vw'}}/>
+                    <img src="images/infoNovi.png" alt="Client Info" style={{height:'30vw'}}/>
                     <div className='pt-10 bg-black flex flex-col w-full pl-5'>
                         <h1 className='text-5xl text-center pb-5'>User Info</h1>
                         <div className='md:text-2xl xl:text-3xl pt-5'>
@@ -129,7 +129,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className={`progress-item ${activeIndex === 1 ? 'active' : ''}`} style={{ order: 3, transform: `translateX(${activeIndex === 0 ? '-240%' : activeIndex === 1 ? '-20%' : '-125%'}) scale(${activeIndex === 2 ? 1 : 0.7})`, opacity: `${activeIndex === 2 ? 1 : 0.4}` }}>
-                    <img src="../public/images/progres.png" alt="Progress" style={{height:'30vw'}} />
+                    <img src="images/progres.png" alt="Progress" style={{height:'30vw'}} />
                     <div className='pt-10 flex flex-col w-full pl-5'>
                         <h1 className='text-4xl text-center pb-5'>Track Progress</h1>
                         <div className='md:text-2xl xl:text-3xl pt-5'>
@@ -156,7 +156,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className={`progress-item ${activeIndex === 2 ? 'active' : ''}`} style={{ order: 1, transform: `translateX(${activeIndex === 0 ? '130%' : activeIndex === 1 ? '20%' : '240%'}) scale(${activeIndex === 0 ? 1 : 0.7})`, opacity: `${activeIndex === 0 ? 1 : 0.4}` }}>
-                    <img src="../public/images/treningNovi.jpeg" alt="Plan" style={{height:'30vw'}}/>
+                    <img src="images/treningNovi.jpeg" alt="Plan" style={{height:'30vw'}}/>
                     <div className='pt-10 flex flex-col w-full pl-5'>
                         <h1 className='text-4xl text-center pb-5'>Fast and Simple Plan</h1>
                         <div className='md:text-2xl xl:text-3xl pt-5'>
@@ -197,69 +197,68 @@ export default function Home() {
             </div>              
         </div>
         <div ref={scrollRef} className='mt-[30vh] px-[10%]'>
-            <h1 className='text-white text-9xl xl:text-8xl'>Key Benefits </h1>
-        </div>
-        <div className='flex px-[10%] text-white'>
-            <div className='flex flex-col lg:w-[49%] justify-between pt-[20vh] gap-[25vh]'>
-                <div className={`flex flex-col items-start justify-start w-[90%] ${inView1 ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`} ref={ref1}>
-                    <img src='images/trener.png' />
-                    <h1 className='text-5xl xl:text-9xl mt-[-4%] text-start'>Training Plan</h1>
-                    <p className='text-start md:text-2xl xl:text-3xl'>
-                        Our app simplifies the process of creating workouts, making it fast and hassle-free. Trainers and clients can
-                        effortlessly collaborate, regardless of their physical location. With just a few clicks, a workout model can
-                        be duplicated and customized, saving valuable time that would otherwise be spent on repetitive tasks. Moreover,
-                        should any errors occur during the workout creation process, our app ensures that corrections are swiftly addressed,
-                        ensuring smooth and efficient workflow.
-                    </p>
-                </div>
-
-        <div className={`flex flex-col items-start justify-start w-[90%] ${inView2 ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`} ref={ref2}>
-          <img src='images/calendarSchedule.png' />
-          <h1 className='text-5xl xl:text-8xl mt-[-20%] text-start'>Dynamic Calendar</h1>
-          <p className='text-start md:text-2xl xl:text-3xl'>
-            In addition to its individual calendar usage, which enhances time management and planning, our app also offers
-            trainers the ability to organize and manage their clients' schedules effectively. Trainers can designate specific
-            appointments or notes in the calendar for each client, ensuring that the respective client is notified and that
-            the appointment is included in their calendar as well. This feature significantly improves organization and allows
-            trainers to take charge of their clients' schedules effortlessly.
-          </p>
+    <h1 className='text-white text-8xl xl:text-8xl'>Key Benefits</h1>
+</div>
+<div className='flex flex-col md:flex-row px-[10%] text-white'>
+    <div className='flex flex-col lg:w-[49%] md:w-[49%] justify-between pt-[20vh] gap-[25vh] md:w-full'>
+        <div className={`flex flex-col items-start justify-start w-[90%] md:w-full ${inView1 ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`} ref={ref1}>
+            <img src='images/trener.png' />
+            <h1 className='text-5xl xl:text-9xl mt-[-4%] text-start'>Training Plan</h1>
+            <p className='text-start text-sm md:text-2xl xl:text-3xl'>
+                Our app simplifies the process of creating workouts, making it fast and hassle-free. Trainers and clients can
+                effortlessly collaborate, regardless of their physical location. With just a few clicks, a workout model can
+                be duplicated and customized, saving valuable time that would otherwise be spent on repetitive tasks. Moreover,
+                should any errors occur during the workout creation process, our app ensures that corrections are swiftly addressed,
+                ensuring smooth and efficient workflow.
+            </p>
         </div>
 
-        <div className={`flex flex-col items-start justify-start w-[90%] ${inView3 ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`} ref={ref3}>
-          <img src='../public/images/app2.jpeg' className='w-[50%]' />
-          <h1 className='text-5xl xl:text-8xl mt-[-15%] text-start'>Communication in One Place</h1>
-          <p className='text-start md:text-2xl xl:text-3xl'>
-            By displaying progress visually after each workout, clients can see their achievements more clearly, addressing
-            the lack of motivation that comes from not being able to see progress directly. Even small improvements often go
-            unnoticed in daily life, but this app highlights even the slightest changes through progress graphs after each
-            session. This helps users stay motivated by making every improvement visible.
-          </p>
+        <div className={`flex flex-col items-start justify-start w-[90%] md:w-full ${inView2 ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`} ref={ref2}>
+            <img src='images/calendarSchedule.png' />
+            <h1 className='text-5xl xl:text-8xl mt-[-20%] text-start'>Dynamic Calendar</h1>
+            <p className='text-start text-sm md:text-2xl xl:text-3xl'>
+                In addition to its individual calendar usage, which enhances time management and planning, our app also offers
+                trainers the ability to organize and manage their clients' schedules effectively. Trainers can designate specific
+                appointments or notes in the calendar for each client, ensuring that the respective client is notified and that
+                the appointment is included in their calendar as well. This feature significantly improves organization and allows
+                trainers to take charge of their clients' schedules effortlessly.
+            </p>
         </div>
-            </div>
-            <div className='hidden lg:flex w-[8%] h-[280vh] flex flex-col justify-between items-center pt-10'>
-                {chevronIcons.map((icon, index) => (
-                    <div key={index} style={{ marginBottom: '5px' }}>{icon}</div>
-                ))}
-            </div>
-            <div className='flex flex-col items-end justify-between lg:w-[49%] h-[200vh] pt-[60vh] md:h-[230vh] md:pt-[80vh] lg:h-[260vh] lg:pt-[90vh]'>
-                <div className={`flex flex-col items-end justify-end w-[90%] ${inView4 ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`} ref={ref4}>
-                    <img src='images/progress2.png'/>
-                    <h1 className='text-5xl xl:text-8xl mt-[-15%] text-end'>Graphical Progress</h1>
-                    <p className='text-end md:text-2xl xl:text-3xl'>
-                    By displaying progress visually after each workout, users can see their achievements more clearly, addressing the lack of motivation that comes from not being able to see progress directly. Even small improvements often go unnoticed in daily life, but this app highlights even the slightest changes through progress graphs after each session. This helps users stay motivated by making every improvement visible.
-                    </p>
-   
-                </div>
-                <div className={`flex flex-col items-end justify-end w-[90%] ${inView5 ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`} ref={ref5}>
-                    <img src='images/videoTraining.png'/>
-                    <h1 className='text-5xl xl:text-8xl mt-[-7%] text-end'>Video Archive</h1>
-                    <p className='text-end md:text-2xl xl:text-3xl'>
-                    Whether your clients are training remotely or unable to attend in-person sessions, FitLoupe offers unparalleled convenience and flexibility. With detailed workout plans accessible anytime, anywhere, clients can stay on track with their fitness goals, even outside the gym. And for trainers, it means the ability to maintain collaboration with clients regardless of geographical constraints.
-                    </p>
-                    
-                </div>
-            </div>
+
+        <div className={`flex flex-col items-start justify-start w-[90%] md:w-full ${inView3 ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`} ref={ref3}>
+            <img src='images/app2.jpeg' className='w-[50%]' />
+            <h1 className='text-5xl xl:text-8xl mt-[-15%] text-start'>Communication in One Place</h1>
+            <p className='text-start text-sm md:text-2xl xl:text-3xl'>
+                By displaying progress visually after each workout, clients can see their achievements more clearly, addressing
+                the lack of motivation that comes from not being able to see progress directly. Even small improvements often go
+                unnoticed in daily life, but this app highlights even the slightest changes through progress graphs after each
+                session. This helps users stay motivated by making every improvement visible.
+            </p>
         </div>
+    </div>
+    <div className='hidden lg:flex w-[8%] h-[280vh] flex flex-col justify-between items-center pt-10'>
+        {chevronIcons.map((icon, index) => (
+            <div key={index} style={{ marginBottom: '5px' }}>{icon}</div>
+        ))}
+    </div>
+    <div className='flex flex-col gap-[20vh] lg:w-[49%] md:w-[49%] h-[150vh] pt-[20vh] md:h-[230vh] md:pt-[80vh] lg:h-[260vh] lg:pt-[90vh] md:w-full'>
+        <div className={`flex flex-col items-end justify-end w-[90%] md:w-full ${inView4 ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`} ref={ref4}>
+            <img src='images/progress2.png'/>
+            <h1 className='text-5xl xl:text-8xl mt-[-15%] text-end'>Graphical Progress</h1>
+            <p className='text-end text-sm md:text-2xl xl:text-3xl'>
+                By displaying progress visually after each workout, users can see their achievements more clearly, addressing the lack of motivation that comes from not being able to see progress directly. Even small improvements often go unnoticed in daily life, but this app highlights even the slightest changes through progress graphs after each session. This helps users stay motivated by making every improvement visible.
+            </p>
+        </div>
+        <div className={`flex flex-col items-end justify-end w-[90%] md:w-full ${inView5 ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`} ref={ref5}>
+            <img src='images/videoTraining.png'/>
+            <h1 className='text-5xl xl:text-8xl mt-[-7%] text-end'>Video Archive</h1>
+            <p className='text-end text-sm md:text-2xl xl:text-3xl'>
+                Whether your clients are training remotely or unable to attend in-person sessions, FitLoupe offers unparalleled convenience and flexibility. With detailed workout plans accessible anytime, anywhere, clients can stay on track with their fitness goals, even outside the gym. And for trainers, it means the ability to maintain collaboration with clients regardless of geographical constraints.
+            </p>
+        </div>
+    </div>
+</div>
+
         {/* <div className='mt-[30%] flex justify-between px-[5%]'>
             <div>
                 <h1>Text</h1>

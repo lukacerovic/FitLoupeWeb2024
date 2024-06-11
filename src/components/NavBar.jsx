@@ -8,7 +8,7 @@ export default function NavBar() {
             {/* <IoMenu color='white' size={60}/> */}
             {/* <h1>Benefits</h1> */}
         </div>
-        <img src='../../public/images/fitLoupe.png' className='self-center w-[20%]' />
+        <img src='images/fitLoupe.png' className='self-center w-[50%] lg:w-[20%]' />
         <div className='flex gap-[10vh] items-center justify-center w-[40%] text-4xl'>
             {/* <h1>Policy</h1> */}
             

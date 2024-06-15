@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import NavBar from '../components/NavBar'
-import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
-import { GiProgression } from "react-icons/gi";
-import { RxCalendar } from "react-icons/rx";
-import { FaVideo } from "react-icons/fa6";
-import { TiMessages } from "react-icons/ti";
-import { FaSearch, FaChevronDown, FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import { FaSearch, FaChevronDown } from "react-icons/fa";
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
+
+
 export default function Home() {
     const [scrollHeight, setScrollHeight] = useState(0);
     const [activeIndex, setActiveIndex] = useState(0);
@@ -266,8 +265,22 @@ export default function Home() {
             </div>
             <img src='../public/images/app2.jpeg' className='w-[30%]'/>
         </div> */}
-        <div className='bg-[#181818] text-white h-screen'>
-           
+        <div className='bg-[#181818] text-white'>
+            <h1 className='text-4xl sm:text-6xl lg:text-8xl text-center pt-[10vw]'>Contact Us</h1>
+            <div className='flex flex-row items-center justify-center gap-[1vw] mt-[5vw] pb-[5vw]'>
+              <SiGmail color={'red'} className=' w-[8vw] h-[8vw] lg:w-[5vw] lg:h-[5vw]' style={{backgroundColor:'white', padding:'0.5vw', borderRadius:10}}/>
+              <p className='text-xl sm:text-4xl lg:text-6xl text-center'>fitloupebusiness@gmail.com</p> 
+               
+            </div>
+            <footer className='bg-black text-white py-[5vw] flex flex-col justify-center items-center'>
+                <p className='text-lg lg:text-2xl'>© 2024 FitLoupe. All rights reserved.</p>
+                {/* <a href='../privacy/privacy-policy.html' rel="noopener noreferrer" target="_blank" className='underline text-lg lg:text-2xl'>
+                    Privacy Policy
+                </a> */}
+                <Link to='/privacy'>
+                    Privacy Policy
+                </Link>
+        </footer>
         </div>
     </div>
   )

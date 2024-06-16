@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+
 import NavBar from '../components/NavBar'
 import { SiGmail } from "react-icons/si";
 import { FaSearch, FaChevronDown } from "react-icons/fa";
@@ -35,6 +36,7 @@ export default function Home() {
       });
 
     const scrollRef = useRef(null);
+    const deviceHeight = window.innerHeight;
     
     const chevronIcons = Array.from({ length: 37 }, (_, index) => (
         <FaChevronDown key={index} size={index * 15 <= scrollHeight ? 80 : 40} color={index * 15 <= scrollHeight ? '#5DE0E6' : 'transparent'} className={`${index * 15 <= scrollHeight ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`}/>
@@ -198,7 +200,7 @@ export default function Home() {
         <div ref={scrollRef} className='mt-[30vh] px-[10%]'>
     <h1 className='text-white text-8xl xl:text-8xl'>Key Benefits</h1>
 </div>
-<div className='flex flex-col md:flex-row px-[10%] text-white'>
+<div className='flex flex-col md:flex-row px-[10%] text-white' style={{paddingBottom: deviceHeight * 0.1}}>
     <div className='flex flex-col lg:w-[49%] md:w-[49%] justify-between pt-[20vh] gap-[25vh] md:w-full'>
         <div className={`flex flex-col items-start justify-start w-[90%] md:w-full ${inView1 ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`} ref={ref1}>
             <img src='images/trener.png' />
@@ -240,7 +242,7 @@ export default function Home() {
             <div key={index} style={{ marginBottom: '5px' }}>{icon}</div>
         ))}
     </div>
-    <div className='flex flex-col gap-[20vh] lg:w-[49%] md:w-[49%] h-[150vh] pt-[20vh] md:h-[230vh] md:pt-[80vh] lg:h-[260vh] lg:pt-[90vh] md:w-full'>
+    <div className='flex flex-col gap-[20vh] lg:w-[49%] md:w-[49%] h-[170vh] pt-[20vh] md:h-[230vh] md:pt-[80vh] lg:h-[260vh] lg:pt-[90vh] md:w-full'>
         <div className={`flex flex-col items-end justify-end w-[90%] md:w-full ${inView4 ? 'opacity-100 transition-opacity duration-1000 ease-in-out' : 'opacity-0'}`} ref={ref4}>
             <img src='images/progress2.png'/>
             <h1 className='text-5xl xl:text-8xl mt-[-15%] text-end'>Graphical Progress</h1>
@@ -265,7 +267,7 @@ export default function Home() {
             </div>
             <img src='../public/images/app2.jpeg' className='w-[30%]'/>
         </div> */}
-        <div className='bg-[#181818] text-white'>
+        <div className='bg-[#181818] text-white relative bottom-0' style={{zIndex:10000000,}}>
             <h1 className='text-4xl sm:text-6xl lg:text-8xl text-center pt-[10vw]'>Contact Us</h1>
             <div className='flex flex-row items-center justify-center gap-[1vw] mt-[5vw] pb-[5vw]'>
               <SiGmail color={'red'} className=' w-[8vw] h-[8vw] lg:w-[5vw] lg:h-[5vw]' style={{backgroundColor:'white', padding:'0.5vw', borderRadius:10}}/>
@@ -280,7 +282,7 @@ export default function Home() {
                 <Link to='/privacy'>
                     Privacy Policy
                 </Link>
-        </footer>
+            </footer>
         </div>
     </div>
   )
